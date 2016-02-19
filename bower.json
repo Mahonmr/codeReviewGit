@@ -1,0 +1,23 @@
+{
+  "name": "codereviewgit",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Mike Mahoney <mahonmr@me.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Mahonmr/codeReviewGit",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "bootstrap": "^3.3.6",
+    "moment": "^2.11.2"
+  }
+}
