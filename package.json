@@ -1,0 +1,22 @@
+{
+  "name": "codereviewgit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mahonmr/codeReviewGit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mahonmr/codeReviewGit/issues"
+  },
+  "homepage": "https://github.com/Mahonmr/codeReviewGit#readme",
+  "devDependencies": {
+    "browserify": "^13.0.0"
+  }
+}
