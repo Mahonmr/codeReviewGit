@@ -9,4 +9,8 @@ $(document).ready(function() {
   });
 });
 
+$(document).ready(function(){
+  $('#time').text(moment());
+});
+
 },{}]},{},[1]);
