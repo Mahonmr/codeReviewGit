@@ -1,5 +1,10 @@
-$gray : #0000ff;
+$blue : #0000ff;
+$gray : #d3d3d3;
 
 .container {
+  background: $blue;
+}
+
+.container2 {
   background: $gray;
 }

@@ -1,9 +1,15 @@
-$(document).ready(function() {
-  $("form#gitcoder").submit(function(event) {
-    event.preventDefault();
-    coder = $("input#coder").val();
-    $.get('https://api.github.com/users/'+coder+'/repos', function(data) {
-      console.log(data);
+$(document).ready(function(){
+  $('#gituser').click(function(){
+    var coder = $("input#coder").val();
+    $('input#coder').val("");
+    $('.result').text("Here is your git user" + coder);
+    $.get('https://api.github.com/users/'+coder+'/repos', function(response) {
+      if (response.cod !== 200) {
+        $('.result').text(response);
+      } else {
+        $('.result').text("WTF");
+      }
     });
   });
 });
+
