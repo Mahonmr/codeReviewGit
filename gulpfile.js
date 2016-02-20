@@ -10,6 +10,7 @@ var buildProduction = utilities.env.production;
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
+var imageop = require('gulp-image-optimization');
 var lib = require('bower-files')({
   "overrides":{
     "bootstrap" : {
@@ -107,6 +108,17 @@ gulp.task('cssBuild', function() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./build/css'))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('images', function() {
+ return gulp.src(['scss/*.png','scss/*.jpg','scss/*.gif','scss/*.jpeg'])
+    .pipe(imageop({
+        optimizationLevel: 5,
+        progressive: true,
+        interlaced: true
+    }))
     .pipe(gulp.dest('./build/css'))
     .pipe(browserSync.stream());
 });
