@@ -143,7 +143,7 @@ a:hover {
 .repolist ul li {
   display: block;
 }
-.repolist ul li a {
+.repolist ul li.repo {
   font-weight: bold;
   padding: 6px 9px;
   display: block;
@@ -164,7 +164,7 @@ a:hover {
   background-image: -o-linear-gradient(top, #5597d8, #3673af);
   background-image: linear-gradient(top, #5597d8, #3673af);
 }
-.repolist ul li a:hover {
+.repolist ul li.repo {
   background-color: #396895;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#4b87c2), to(#396895));
   background-image: -webkit-linear-gradient(top, #4b87c2, #396895);
@@ -173,13 +173,13 @@ a:hover {
   background-image: -o-linear-gradient(top, #4b87c2, #396895);
   background-image: linear-gradient(top, #4b87c2, #396895);
 }
-.repolist ul li a:active {
+.repolist ul li.repo {
   -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.25);
   -moz-box-shadow: inset 0 3px 5px rgba(0,0,0,0.25);
   box-shadow: inset 0 3px 5px rgba(0,0,0,0.25);
 }
 
-.repolist ul li a span {
+.repolist ul li.repo span {
   font-family: "Courier New", Courier, "Lucida Typewriter", monospace;
   font-size: 0.9em;
 }

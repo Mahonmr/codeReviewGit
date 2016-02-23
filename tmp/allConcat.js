@@ -33,9 +33,9 @@ $(document).ready(function(e){
         function outputPageContent() {
           if(repositories.length === 0) { outhtml = outhtml + '<p>No repos!</p></div>'; }
           else {
-            outhtml = outhtml + '<p><strong>Repos List:</strong></p> <ul>';
+            outhtml = outhtml + '<p><strong>Repos List:</strong></p> <ul id="test">';
             $.each(repositories, function(index) {
-              outhtml = outhtml + '<li><a href="'+repositories[index].html_url+'" target="_blank">'+repositories[index].name + '</a></li>';
+              outhtml = outhtml + '<li class="repo">'+repositories[index].name + '</li>';
             });
             outhtml = outhtml + '</ul></div>';
           }
@@ -44,9 +44,15 @@ $(document).ready(function(e){
       }
     });
   });
+  $( "#ghapidata" ).on( "mouseenter", ".repo", function() {
+    console.log(this)
+    $( "#details" ).append( "<p>Another paragraph!</p>" );
+  });
+
+  $( "#ghapidata" ).on( "mouseleave", ".repolist", function() {
+    $( "#details" ).empty();
+  });
 });
-
-
 
 $(document).ready(function(){
   $('#time').text(moment());
